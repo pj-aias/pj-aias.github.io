@@ -62,7 +62,7 @@
       <h5 class="heading-copy"><strong>サービスサーバ</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">認証サーバを通してサービスアプリと通信するサーバである．実装対象外．<br></div>
       <h5 class="heading-copy"><strong>身元確認アプリ<br></strong></h5>
-      <div class="paragraph-bigger cc-bigger-light">ユーザの身元を eKYC を確認するモバイルアプリケーションである．<br></div>
+      <div class="paragraph-bigger cc-bigger-light">ユーザの身元を eKYCなどを用いて 確認するモバイルアプリケーションである．<br></div>
       <h5 class="heading-copy"><strong>身元確認サーバ</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">身元確認アプリから身元のデータ受け取り，分散型グループ署名方式のクレデンシャルを作成する．<br></div>
       <h5 class="heading-copy"><strong>匿名認証 SDK</strong></h5>
@@ -76,7 +76,7 @@
       <h3 class="heading-copy-copy">手続き</h3>
       <div class="paragraph-bigger cc-bigger-light">AIAS は参加，認証，追跡の手続きから成り立つ．<br></div>
       <h5 class="heading-copy"><strong>参加</strong></h5>
-      <div class="paragraph-bigger cc-bigger-light">サービスアプリは，身元確認サーバに登録要求する．身元確認アプリは eKYC を用いて身元確認サーバに対して，自身の身元を証明する．身元を証明した後，フェアブラインド署名を用いた署名方式の証明書を発行してサービスアプリを送信する．<br></div>
+      <div class="paragraph-bigger cc-bigger-light">サービスアプリは，身元確認サーバに登録要求する．身元確認アプリは eKYCなど を用い，身元確認サーバに対して，自身の身元を証明する．身元を証明した後，分散型グループ署名をサービスアプリに送信する．<br></div>
       <h5 class="heading-copy"><strong>認証</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">サービスアプリは送りたいデータに対して署名をし，証明書とともにサービスサーバに送信する．サービスサーバは署名と証明書を検証する．<br></div>
       <h5 class="heading-copy"><strong>追跡</strong></h5>
