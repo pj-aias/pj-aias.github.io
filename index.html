@@ -50,7 +50,7 @@
         <div class="paragraph-bigger cc-bigger-light">ユーザは自身の不正に対し， 否認することができない．<br></div>
       </div>
       <h3 class="heading">課題</h3>
-      <div class="paragraph-bigger cc-bigger-light">フェアブラインド署名方式を用いた認証[1]などの技術はすでに存在しているが，<strong>ユーザが利用する実環境（モバイル環境）で匿名認証を行うための環境が揃っていない</strong>．サービスの提供者が第三者機関と暗号関係のエンジニアを集めて，自力で匿名認証を実装するのは難しいため，サービス上で匿名認証をすることができない．<br></div>
+      <div class="paragraph-bigger cc-bigger-light">分散型グループ署名方式[1]を用いた認証などの技術はすでに存在しているが，<strong>ユーザが利用する実環境（モバイル環境）で匿名認証を行うための環境が揃っていない</strong>．サービスの提供者が第三者機関と暗号関係のエンジニアを集めて，自力で匿名認証を実装するのは難しいため，サービス上で匿名認証をすることができない．<br></div>
       <h3 class="heading">目的</h3>
       <div class="paragraph-bigger cc-bigger-light">課題 を解決するため，<strong>モバイル向け匿名認証プラットフォーム AIAS(Anonymous Identity Auth Service)を実装・提供</strong>する． AIAS はサービスに代わって，匿名認証に必要な暗号処理を行うため，サービス提供者は暗号関係の処理を実装する必要がなく，暗号関係のエンジニアがいない多くのサービスで匿名認証を利用できる．<br></div>
       <h3 class="heading">仕様</h3>
@@ -64,12 +64,12 @@
       <h5 class="heading-copy"><strong>身元確認アプリ<br></strong></h5>
       <div class="paragraph-bigger cc-bigger-light">ユーザの身元を eKYC を確認するモバイルアプリケーションである．<br></div>
       <h5 class="heading-copy"><strong>身元確認サーバ</strong></h5>
-      <div class="paragraph-bigger cc-bigger-light">身元確認アプリから身元のデータ受け取り，フェアブラインド署名方式を用いた証明書を作成する．<br></div>
+      <div class="paragraph-bigger cc-bigger-light">身元確認アプリから身元のデータ受け取り，分散型グループ署名方式のクレデンシャルを作成する．<br></div>
       <h5 class="heading-copy"><strong>匿名認証 SDK</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">サービスアプリの向けの匿名認証 SDK である．認証に必要な情報を生成する．<br></div>
-      <h5 class="heading-copy"><strong>認証サーバ（Nginx）</strong></h5>
+      <h5 class="heading-copy"><strong>認証サーバ（Nginx，WIP）</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">サービスサーバの提供者が持つ，認証用のリバースプロキシである．匿名認証プラグインが設定されている．<br></div>
-      <h5 class="heading-copy"><strong>匿名認証プラグイン</strong></h5>
+      <h5 class="heading-copy"><strong>匿名認証プラグイン(WIP)</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">Nginx 向けの匿名認証を行うプラグインである．<br></div>
       <h5 class="heading-copy"><strong>追跡ツール</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">追跡機関の持つツールセットである．署名からユーザを追跡するために必要な情報を生成することができる．<br></div>
@@ -80,9 +80,9 @@
       <h5 class="heading-copy"><strong>認証</strong></h5>
       <div class="paragraph-bigger cc-bigger-light">サービスアプリは送りたいデータに対して署名をし，証明書とともにサービスサーバに送信する．サービスサーバは署名と証明書を検証する．<br></div>
       <h5 class="heading-copy"><strong>追跡</strong></h5>
-      <div class="paragraph-bigger cc-bigger-light">サービスサーバの管理者は各追跡機関に対して署名を送信する．追跡機関 は 証明書にあるフェアブラインド署名をもとに， 署名したメンバを特定する．<br></div>
+      <div class="paragraph-bigger cc-bigger-light">サービスサーバの管理者は各追跡機関に対して署名を送信する．追跡機関 は 証明書にある分散型グループ署名をもとに， 署名したメンバを特定する．<br></div>
       <h3 class="heading-copy-copy">参考</h3>
-      <div class="paragraph-bigger cc-bigger-light">[1] 千田浩司, et al. “代理アクセスを利用した匿名認証方式.” 情報処理学会研究報告コンピュータセキュリティ (CSEC) 2005.33 (2004-CSEC-028) (2005): 235-240.<br></div>
+      <div class="paragraph-bigger cc-bigger-light">[1] https://link.springer.com/chapter/10.1007/978-3-030-57990-6_20<br></div>
     </div>
     <div class="container"></div>
     <div class="w-dyn-list">
